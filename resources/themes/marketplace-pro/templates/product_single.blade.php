@@ -145,7 +145,7 @@
                                     <p class="description">
                                         {!! $product->caption !!}
                                     </p>
-                                    {!! CoralsForm::openForm(null,['url'=>'cart/'.$product->hashed_id.'/add-to-cart','method'=>'POST','class'=> 'ajax-form','id'=>'sku-form','data-page_action'=>"updateCart"]) !!}
+                                    {!! CoralsForm::openForm(null,['url'=>url('cart/'.$product->hashed_id.'/add-to-cart'),'method'=>'POST','class'=> 'ajax-form','id'=>'sku-form','data-page_action'=>"updateCart"]) !!}
                                     @if(!$product->isSimple)
                                         @switch($productSKUsDisplayMethod = $product->getProperty('show_skus_as'))
                                             @case('radio_skus')
